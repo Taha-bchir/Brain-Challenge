@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainChallenge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>BrainChallenge</h1>
+  <div id="game">
+    <div id="settings">
+      <label for="difficulty">Difficulty:</label>
+      <select id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <label for="category">Category:</label>
+      <select id="category">
+        <option value="random">Random</option>
+        <option value="addition">Addition</option>
+        <option value="subtraction">Subtraction</option>
+        <option value="multiplication">Multiplication</option>
+        <option value="division">Division</option>
+      </select>
+      <label for="customTimer">Custom Timer (seconds):</label>
+      <input type="number" id="customTimer" size="5" min="90" max="300">
+      <label for="sound">Sound:</label>
+      <select id="sound">
+        <option value="on">On</option>
+        <option value="off">Off</option>
+      </select>
+      <label for="theme">Theme:</label>
+      <select id="theme">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+      <button id="startButton">Start Game</button>
+      <button id="resetButton">Reset Game</button>
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+    </div>
+    <div id="question"></div>
+    <div id="options">    </div>
+    <div id="timer">Time left: 90s</div>
+    <div id="score">Score: 0</div>
+    <div id="leaderboard">
+      <h2>Leaderboard</h2>
+      <ul id="leaderboardList">
+      </ul>
+    </div>
+  </div>
+  <audio id="correctSound" src="the_price_is_right_ding.mp3"></audio>
+  <audio id="incorrectSound" src="PSYCH! That's the wrong number!.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
